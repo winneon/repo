@@ -1,6 +1,6 @@
 Package: net.winneonsword.minimality
 Name: Minimality
-Version: 1.2
+Version: 1.1
 Architecture: iphoneos-arm
 Description: Minimality is a simple HTML lockscreen theme that can be implemented with LockHTML 3 or any similar tweak that allows HTML for their lockscreen.
 Homepage: http://winneonsword.net
