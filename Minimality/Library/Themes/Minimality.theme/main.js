@@ -1,5 +1,6 @@
-function init(){
+var hours12 = false;
 
+function init(){
 	time();
 	
 }
@@ -7,25 +8,30 @@ function init(){
 function time(){
 	
 	var d = new Date();
-	date(d);
-	var min = '' + d.getMinutes();
-	
-	if (min.length == 1){
-		
-		min = '0' + min;
-		
-	}
+	var hour = d.getHours();
+	var min = d.getMinutes();
 	
 	var h = document.getElementById('hour');
 	var m = document.getElementById('min');
 	
-	hour = convert(d.getHours());
+	if (hours12){
+		
+		if (hour > 12){
+			
+			hour -= 12;
+			
+		}
+		
+	}
+	
+	hour = convert(hour);
 	min = convert(min);
 	
 	h.innerHTML = hour;
 	m.innerHTML = min;
 	
-	setTimeout(time, 1000);
+	date(d);
+	setTimeout('time()', 1000);
 	
 }
 
@@ -38,7 +44,7 @@ function date(d){
 		'THURSDAY', 'FRIDAY', 'SATURDAY'];
 	var months = ['JANUARY', 'FEBRURARY', 'MARCH', 'APRIL',
 		'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER',
-		'OCTOBER', 'NOVEMBER', 'DECEMBER']
+		'OCTOBER', 'NOVEMBER', 'DECEMBER'];
 	
 	var day = days[d.getDay()];
 	var month = months[d.getMonth()];
@@ -60,8 +66,6 @@ function convert(min){
 	var ten;
 	var one;
 	var result;
-	
-	min = parseInt(min.toString(), 0);
 	
 	if (min < ones.length){
 	
