@@ -1,12 +1,12 @@
 function init(){
 
-	time();
+	var date = new Date();
+	time(date);
 	
 }
 
-function time(){
+function time(d){
 	
-	var d = new Date();
 	date(d);
 	var min = '' + d.getMinutes();
 	
