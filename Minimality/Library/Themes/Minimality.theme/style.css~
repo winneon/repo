@@ -12,6 +12,7 @@ body {
 	height: 568px;
 	color: #FFFFFF;
 	opacity: 0.5;
+background-color: black;
 }
 #bg {
 	position: absolute;
