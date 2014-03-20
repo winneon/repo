@@ -27,7 +27,7 @@ function time(){
 	hour = convert(hour);
 	min = convert(min);
 	
-	h.innerHTML = hour;
+	h.innerHTML = '&nbsp;' + hour;
 	m.innerHTML = min;
 	
 	date(d);
@@ -65,11 +65,17 @@ function convert(min){
 	
 	var ten;
 	var one;
-	var result;
+	var result = "";
 	
 	if (min < ones.length){
-	
-		result = ones[min];
+		
+		if (min < 10){
+			
+			result = "o' ";
+			
+		}
+		
+		result += ones[min];
 		
 	} else {
 	
