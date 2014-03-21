@@ -24,8 +24,8 @@ function time(){
 		
 	}
 	
-	hour = convert(hour);
-	min = convert(min);
+	hour = convert(hour, false);
+	min = convert(min, true);
 	
 	h.innerHTML = '&nbsp;' + hour;
 	m.innerHTML = min;
@@ -54,7 +54,7 @@ function date(d){
 	
 }
 
-function convert(min){
+function convert(min, minute){
 	
 	var ones = ['zero', 'one', 'two', 'three', 'four', 'five',
 		'six', 'seven', 'eight', 'nine', 'ten',
@@ -69,13 +69,21 @@ function convert(min){
 	
 	if (min < ones.length){
 		
-		if (min < 10){
+		if (min < 10 && minute){
 			
 			result = "o' ";
 			
 		}
 		
-		result += ones[min];
+		if (min == 0 && minute){
+			
+			result += "clock";
+			
+		} else {
+			
+			result += ones[min];
+			
+		}
 		
 	} else {
 	
