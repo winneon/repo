@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 320px;
+	height: 568px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	color: white;
+}
+div#content {
+	/*border: black solid 1px;*/
+	height: 480px;
+}
+div#top {
+	padding-top: 100px;
+}
+div#main_circle {
+	background: url('bg_circle.png') no-repeat center;
+	text-align: center;
+	width: 148px;
+	height: 148px;
+	margin: 0 auto;
+}
+div#touch_circle {
+	background: url('touch_circle.png') no-repeat center;
+	text-align: center;
+	width: 64px;
+	height: 64px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+div#day {
+	padding-top: 2px;
+	font-weight: 800;
+}
+div#time {
+	padding-top: 55px;
+	line-height: 20px;
+}
+span#hour {
+	font-weight: 800;
+}
