@@ -1,6 +1,6 @@
 Package: net.winneonsword.CircleLove
 Name: CircleLove
-Version: 1.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: A simple lockscreen widget that has circles! This is clearly the best description for any theme. This currently works with LockHTML3 and GroovyLock.
 Homepage: http://winneonsword.net
