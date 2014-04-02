@@ -3,8 +3,7 @@ Name: Minimality
 Version: 1.4
 Architecture: iphoneos-arm
 Description: Minimality is a simple HTML lockscreen theme that can be implemented with LockHTML 3 or any similar tweak that allows HTML for their lockscreen.
-Depiction: http://repo.winneonsword.net/packages/minimality.html
-Homepage: http://winneonsword.net
-Maintainer: Jesse Bryan (WinneonSword) <winneonsword@gmail.com>
-Author: Jesse Bryan (WinneonSword) <winneonsword@gmail.com>
+Homepage: http://repo.winneonsword.net
+Maintainer: Jesse Bryan <winneonsword@gmail.com>
+Author: Jesse Bryan <winneonsword@gmail.com>
 Section: Themes

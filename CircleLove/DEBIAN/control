@@ -1,9 +1,9 @@
 Package: net.winneonsword.circlelove
 Name: CircleLove
-Version: 1.0.3
+Version: 1.0.4
 Architecture: iphoneos-arm
-Description: A simple lockscreen tweak that has circles! Yeah! Currently works with LockHTML3 and GroovyLock.
-Homepage: http://winneonsword.net
-Maintainer: Jesse Bryan (WinneonSword) <winneonsword@gmail.com>
-Author: Jesse Bryan (WinneonSword) <winneonsword@gmail.com>
+Description: CircleLove is an HTML lockscreen designed to focus on the minimality of circles. Currently works with GroovyLock and LockHTML 3.
+Homepage: http://repo.winneonsword.net
+Maintainer: Jesse Bryan <winneonsword@gmail.com>
+Author: Jesse Bryan <winneonsword@gmail.com>
 Section: Themes
