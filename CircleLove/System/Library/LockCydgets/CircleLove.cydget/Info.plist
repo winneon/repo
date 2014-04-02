@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding-"UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Configuration</key>
+		<dict>
+			<key>Homepage</key>
+			<string>file:///System/Library/LockCydgets/CircleLove.cydget/LockBackground.html</string>
+			<key>Scrollable</key>
+			<string>NO</string>
+			<key>Plugin</key>
+			<string>WebCyscriptLockScreen</string>
+			<key>Tagline</key>
+			<string>CircleLove</string>
+	</dict>
+</plist>
