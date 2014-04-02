@@ -1,0 +1,9 @@
+Package: net.winneonsword.circlelove
+Name: CircleLove
+Version: 1.1
+Architecture: iphoneos-arm
+Description: CircleLove is an HTML lockscreen desgiend to focus on the minimality of circles. Designed for Cydget.
+Homepage: http://repo.winneonsword.net
+Maintainer: Jesse Bryan <winneonsword@gmail.com>
+Author: Jesse Bryan <winneonsword@gmail.com>
+Section: Themes
