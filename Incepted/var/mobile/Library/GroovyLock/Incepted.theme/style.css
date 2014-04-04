@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('BebasNeue.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	margin: 0;
+	width: 320px;
+	height: 480px;
+	text-align: center;
+}
+div {
+	margin: 0 auto;
+}
+div#content {
+	padding-top: 80px;
+}
+div#bar {
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	padding: 3px;
+	opacity: 0.5;
+	font-size: 11px;
+	letter-spacing: 5px;
+}
+div#time {
+	background-color: white;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 32px;
+	padding-top: 5px;
+}
+span#hour {
+	font-weight: bold;
+}

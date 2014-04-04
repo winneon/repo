@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<script type="text/javascript" src="http://winneonsword.net/verbal_date.js"></script>
+		<script type="text/javascript">
+			function init(){
+				var verb = new VerbalDate(false);
+				var date = new Date();
+				
+				document.getElementById("dayofweek").innerHTML = verb.getDayOfWeek();
+				document.getElementById("day").innerHTML = date.getDate();
+				document.getElementById("month").innerHTML = verb.getMonth();
+				document.getElementById("year").innerHTML = date.getFullYear();
+				document.getElementById("hour").innerHTML = verb.getHour();
+				document.getElementById("minute").innerHTML = verb.getMinute();
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<div id="content">
+			<div id="bar">
+				<span id="dayofweek"></span>
+			</div>
+			<div id="time">
+				<span id="hour"></span>.<span id="minute"></span>
+			</div>
+			<div id="bar">
+				<span id="day"></span> <span id="month"></span> <span id="year"></span>
+			</div>
+		</div>
+	</body>
+</html>
