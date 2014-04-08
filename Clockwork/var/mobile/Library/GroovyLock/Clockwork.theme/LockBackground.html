@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700,800" />
+		<script type="text/javascript" src="verbal_date.js"></script>
+		<script type="text/javascript" src="options.js"></script>
+		<script type="text/javascript">
+			function init(){
+				var verb = new VerbalDate(hours12format);
+				var date = new Date();
+				if (textFormat){
+					document.getElementById("hour").innerHTML = verb.getHour();
+					document.getElementById("minute").innerHTML = verb.getMinute();
+				} else {
+					var hours = date.getHours();
+					var type = "";
+					if (hours12format){
+						if (hours > 12){
+							hours -= 12;
+							type += " PM"
+						} else {
+							type += " AM"
+						}
+					}
+					document.getElementById("hour").innerHTML = hours;
+					document.getElementById("minute").innerHTML = date.getMinutes() + type;
+				}
+				setTimeout("init();", 1000);
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<div id="content">
+			<div class="time" id="hour">twelve</div>
+			<fieldset id="divider"><legend>W E D N E S D A Y</legend></fieldset>
+			<div class="time" id="minute">o'clock</div>
+		</div>
+	</body>
+</html>

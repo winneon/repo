@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	width: 320px;
+	height: 480px;
+	text-align: center;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+div {
+	margin: 0 auto;
+}
+div#content {
+	padding-top: 160px;
+}
+div.time {
+	font-weight: 800;
+	font-size: 36px;
+	margin: -5px 0px -5px 0px;
+	text-transform: lowercase;
+}
+fieldset#divider {
+	border: none;
+	border-top: 2px solid white;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 700;
+	width: 200px;
+	height: 0px;
+	margin: 0 auto;
+}
