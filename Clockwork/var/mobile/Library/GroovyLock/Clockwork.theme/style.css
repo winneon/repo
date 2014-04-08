@@ -10,13 +10,19 @@ div {
 	margin: 0 auto;
 }
 div#content {
-	padding-top: 160px;
+	padding-top: 170px;
 }
 div.time {
 	font-weight: 800;
 	font-size: 36px;
 	margin: -5px 0px -5px 0px;
 	text-transform: lowercase;
+}
+legend#dayofweek {
+	text-transform: uppercase;
+}
+div#minute {
+	font-size: 30px;
 }
 fieldset#divider {
 	border: none;

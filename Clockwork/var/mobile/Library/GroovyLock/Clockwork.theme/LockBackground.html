@@ -10,6 +10,8 @@
 			function init(){
 				var verb = new VerbalDate(hours12format);
 				var date = new Date();
+				
+				document.getElementById("dayofweek").innerHTML = verb.getDayOfWeek();
 				if (textFormat){
 					document.getElementById("hour").innerHTML = verb.getHour();
 					document.getElementById("minute").innerHTML = verb.getMinute();
@@ -33,9 +35,9 @@
 	</head>
 	<body onload="init();">
 		<div id="content">
-			<div class="time" id="hour">twelve</div>
-			<fieldset id="divider"><legend>W E D N E S D A Y</legend></fieldset>
-			<div class="time" id="minute">o'clock</div>
+			<div class="time" id="hour">hello</div>
+			<fieldset id="divider"><legend id="dayofweek">you shouldn't be seeing this</legend></fieldset>
+			<div class="time" id="minute">there</div>
 		</div>
 	</body>
 </html>

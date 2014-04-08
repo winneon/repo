@@ -1,6 +1,6 @@
 Package: net.winneonsword.clockwork
 Name: Clockwork
-Version: 1.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Clockwork is a simple lockscreen theme that is designed to fit nicely with minimal /and/ "maximal" setups. Designed for GroovyLock and LockHTML3.
 Homepage: http://repo.winneonsword.net
