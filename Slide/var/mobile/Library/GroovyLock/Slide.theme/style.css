@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+	width: 320px;
+	height: 480px;
+	text-align: center;
+	color: white;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	font-family: "Bebas Neue";
+	word-spacing: 5px;
+}
+
+img {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+
+.content {
+	width: 320px;
+	height: 480px;
+}
+
+.content:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+.time {
+	display: inline-block;
+	vertical-align: middle;
+	width: 300px;
+	margin-left: -10px;
+}
+
+.time div {
+	padding: 5px 0px;
+}
+
+.text {
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 25px;
+	margin-left: 25px;
+}
+
+.hours,
+.mins {
+	display: inline-block;
+}
+
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("BebasNeue.otf");
+	font-weight: normal;
+	font-style: normal;
+}
