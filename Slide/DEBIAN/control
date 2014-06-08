@@ -1,6 +1,6 @@
 Package: net.winneonsword.slide
 Name: Slide
-Version: 1.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Slide is a LS theme that focuses on the tiny details (quite literally), and is designed to not obscure your lockscreen, but embrace it. Designed for GroovyLock and LockHTML3.
 Homepage: http://repo.winneonsword.net
