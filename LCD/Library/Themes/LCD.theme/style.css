@@ -1,0 +1,120 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+	width: 320px;
+	height: 480px;
+	text-align: center;
+	color: white;
+	font-family: "Open Sans";
+	font-size: 72px;
+}
+
+img {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+
+.content {
+	display: inline-block;
+	width: 320px;
+	margin-top: 80px;
+	padding: 10px 0px;
+	background-color: rgba(45, 45, 45, 0.8);
+}
+
+.time {
+	font-weight: 800;
+	letter-spacing: -3px;
+	margin: -20px 0px 0px -3px;
+}
+
+.time div {
+	padding: 5px 0px;
+	display: inline;
+	margin: 0px -7.5px;
+}
+
+.date {
+	margin: -15px 0px 5px 0px;
+	font-weight: 800;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.box {
+	font-size: 14px;
+}
+
+ul {
+	padding: 5px 0px;
+	display: inline-block;
+	width: 110px;
+}
+
+ul:first-of-type {
+	margin-right: -2px;
+}
+
+ul:last-of-type {
+	margin-left: -2px;
+}
+
+.left {
+	text-align: left;
+	font-weight: 700;
+	border-right: 1px solid white;
+}
+
+.left li:after,
+.hours:after {
+	content: ":";
+}
+
+.hours:after {
+	font-size: 56px;
+	position: relative;
+	bottom: 7px;
+	padding: 0px 5px;
+}
+
+.right {
+	text-align: right;
+	border-left: 1px solid white;
+}
+
+.error {
+	font-size: 16px;
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("opensans.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("opensans_bold.ttf");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("opensans_extrabold.ttf");
+	font-weight: 800;
+	font-style: normal;
+}
