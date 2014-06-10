@@ -1,6 +1,6 @@
 Package: net.winneonsword.cataracs
 Name: Cataracs
-Version: 1.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Cataracs is a realtively simple lockscreen clock / widget that features a minimal clock centered on the lockscreen. The theme is designed to not obscure the background wallpaper, but to show it off. The name and request for Cataracs comes from the Reddit user /u/rstgyx. The original version of this theme is called Addict by @Nacknaw on deviantART. Designed for GroovyLock and LockHTML3.
 Homepage: http://repo.winneonsword.net
