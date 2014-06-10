@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	text-align: center;
+	color: white;
+	font-family: "Gotham";
+}
+
+img {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+
+.content {
+	width: 320px;
+	height: 480px;
+}
+
+.content:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+.time {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 56px;
+	line-height: 60px;
+	border: 2px solid white;
+	width: 120px;
+	padding: 20px 0px 20px 0px;
+}
+
+.hours {
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("gotham_light.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("gotham_book.ttf");
+	font-weight: 700;
+	font-style: normal;
+}
