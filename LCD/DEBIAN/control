@@ -1,6 +1,6 @@
 Package: net.winneonsword.lcd
 Name: LCD
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: LCD is a LS theme that takes the lockscreen to a whole new level, adding weather and location information aswell as the time and date. To find your WOEID (used for your location), go to http://woeid.rosselliot.co.nz/ . Designed for LockHTML3 only.
 Homepage: http://repo.winneonsword.net
