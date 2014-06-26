@@ -64,6 +64,20 @@ header h1 {
 	font-weight: 500;
 }
 
+img {
+	margin-right: 15px;
+	width: 290px;
+}
+
+img:last-child {
+	margin-right: 0px;
+}
+
+p.screens {
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
 ul {
 	margin: 5px 0 35px 0;
 	list-style: none;
