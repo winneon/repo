@@ -1,12 +1,12 @@
 ./remove.sh
 
-dpkg-deb -b Minimality
-dpkg-deb -b CircleLove
-dpkg-deb -b Incepted
-dpkg-deb -b Clockwork
-dpkg-deb -b Slide
-dpkg-deb -b LCD
-dpkg-deb -b Cataracs
+dpkg-deb -b -Zgzip Minimality
+dpkg-deb -b -Zgzip CircleLove
+dpkg-deb -b -Zgzip Incepted
+dpkg-deb -b -Zgzip Clockwork
+dpkg-deb -b -Zgzip Slide
+dpkg-deb -b -Zgzip LCD
+dpkg-deb -b -Zgzip Cataracs
 
 dpkg-scanpackages -m . /dev/null >Packages
 bzip2 Packages
