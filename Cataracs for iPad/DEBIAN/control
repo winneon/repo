@@ -1,0 +1,9 @@
+Package: net.winneonsword.cataracs
+Name: Cataracs for iPad
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Cataracs for iPad is a realtively simple lockscreen clock / widget that features a minimal clock centered on the lockscreen.
+Homepage: http://repo.winneonsword.net
+Maintainer: Jesse Bryan <winneonsword@gmail.com>
+Author: Jesse Bryan <winneonsword@gmail.com>
+Section: Themes
