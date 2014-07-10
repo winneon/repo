@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	text-align: center;
 	color: white;
-	font-family: "Gotham";
+	font-family: "Gotham", -apple-system-body, sans-serif;
 }
 
 img {
@@ -11,12 +11,12 @@ img {
 	z-index: -1;
 }
 
-.content {
+div.content {
 	width: 320px;
 	height: 480px;
 }
 
-.content:before {
+div.content:before {
 	content: "";
 	display: inline-block;
 	height: 100%;
@@ -24,7 +24,7 @@ img {
 	margin-right: -0.25em;
 }
 
-.time {
+div.time {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 56px;
@@ -34,7 +34,7 @@ img {
 	padding: 20px 0px 20px 0px;
 }
 
-.hours {
+div.hours {
 	font-weight: 700;
 }
 
