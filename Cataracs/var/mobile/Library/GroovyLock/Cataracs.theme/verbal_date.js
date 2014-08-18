@@ -41,27 +41,35 @@ function VerbalDate(hours12){
 	};
 	
 	return {
-		getDay:function(){
+		getDay: function(){
 			return convert(date.getDate(), false);
 		},
 		
-		getDayOfWeek:function(){
+		getDayOfWeek: function(){
 			return days[date.getDay()];
 		},
 		
-		getMonth:function(){
+		getShortDayOfWeek: function(){
+			return days[date.getDay()].substring(0, 3);
+		},
+		
+		getMonth: function(){
 			return months[date.getMonth()];
 		},
 		
-		getYear:function(){
+		getShortMonth: function(){
+			return months[date.getMonth()].substring(0, 3);
+		},
+		
+		getYear: function(){
 			return date.getYear();
 		},
 		
-		getHour:function(){
+		getHour: function(){
 			return convert(date.getHours() > 12 && hours ? date.getHours() - 12 : date.getHours(), false);
 		},
 		
-		getMinute:function(){
+		getMinute: function(){
 			return convert(date.getMinutes(), true);
 		}
 	};

@@ -1,32 +1,46 @@
-body {
+* {
 	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 320px;
 	text-align: center;
 	color: white;
-	font-family: "Gotham", -apple-system-body, sans-serif;
+	font-family: "Gotham", -apple-system-font, sans-serif;
+}
+
+div.bg {
+	position: absolute;
+	/* In case the user doesn't have Wallpaper JPEGifier. */
+	background-repeat: no-repeat;
+	background-size: 320px auto;
+	background-image: url("/var/mobile/Library/SpringBoard/LockBackgroundThumbnail.jpg");
+	background-image: url("/var/mobile/Library/SpringBoard/Converted-LockBackground.jpg");
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	z-index: -1;
 }
 
 img {
 	position: absolute;
+	top: 0;
 	left: 0;
-	z-index: -1;
 }
 
 div.content {
-	width: 320px;
-	height: 480px;
+	display: inline-block;
 }
 
-div.content:before {
-	content: "";
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-	margin-right: -0.25em;
+div.blur {
+	position: absolute;
+	width: 124px;
+	height: 164px;
+	z-index: -1;
 }
 
 div.time {
-	display: inline-block;
-	vertical-align: middle;
 	font-size: 56px;
 	line-height: 60px;
 	border: 2px solid white;
@@ -34,7 +48,21 @@ div.time {
 	padding: 20px 0px 20px 0px;
 }
 
+div.shadow {
+	box-shadow: 0px 0px 20px black;
+}
+
 div.hours {
+	font-weight: 700;
+}
+
+div.date {
+	display: none;
+	position: relative;
+	left: 2px;
+	bottom: 23px;
+	width: 120px;
+	font-size: 12px;
 	font-weight: 700;
 }
 
