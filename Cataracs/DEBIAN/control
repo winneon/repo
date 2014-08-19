@@ -5,7 +5,7 @@ Architecture: iphoneos-arm
 Description: Cataracs is a realtively simple lockscreen clock / widget that features a minimal clock centered on the lockscreen.
 Depiction: http://repo.winneonsword.net/d/net.winneonsword.cataracs.html
 Homepage: http://repo.winneonsword.net
-Depends: com.groovycarrot.groovyapi, com.darkweaver.wallpaperjpegifier
+Depends: com.groovycarrot.groovyapi
 Maintainer: Jesse Bryan <winneonsword@gmail.com>
 Author: Jesse Bryan <winneonsword@gmail.com>
 Section: Themes
