@@ -12,10 +12,8 @@ body {
 
 div.bg {
 	position: absolute;
-	/* In case the user doesn't have Wallpaper JPEGifier. */
 	background-repeat: no-repeat;
 	background-size: 320px auto;
-	background-image: url("/var/mobile/Library/SpringBoard/LockBackgroundThumbnail.jpg");
 	background-image: url("/var/mobile/Library/SpringBoard/Converted-LockBackground.jpg");
 	width: 100%;
 	height: 100%;

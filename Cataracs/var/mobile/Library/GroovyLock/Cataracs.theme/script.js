@@ -34,10 +34,10 @@ function run(){
 	$("div.mins").html(date.getMinutes() > 9 ? date.getMinutes() : "0" + date.getMinutes());
 	$("div.date").html(verbal.getShortDayOfWeek() + ", " + date.getDate() + " " + verbal.getShortMonth() + " " + date.getFullYear());
 	
-	if (window.groovyAPI){
+	if (window.groovyAPI && notification_support){
 		if (groovyAPI.isShowingNotifications()){
 			$("div.content").animate({
-				"padding-top": "10px"
+				"padding-top": notification_spacing + "px"
 			}, 1000);
 		} else if ($("div.content").css("padding-top") != spacing + "px"){
 			$("div.content").animate({

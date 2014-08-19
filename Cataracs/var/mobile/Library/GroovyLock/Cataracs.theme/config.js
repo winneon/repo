@@ -1,0 +1,1 @@
+// This is an empty configuration file for GroovyLock that fixes an issue that prevented users from using Cataracs. For now, this will stay empty, until I need or want to use it.
