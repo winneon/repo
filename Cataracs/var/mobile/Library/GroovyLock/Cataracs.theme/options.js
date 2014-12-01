@@ -1,7 +1,3 @@
-/*
-  DO NOT CHANGE THESE SETTINGS FROM FILE! To change settings, select the theme in GroovyLock or LockHTML3. Please don't come to me asking for help when this statement is clearly here.
-*/
-
 // 24 hour time. true = 24 hours, false = 12 hours. Default is false.
 var hours24 = false;
 
