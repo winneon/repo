@@ -15,6 +15,12 @@ $(document).ready(function(){
 	if (bg_colour != "transparent"){
 		$("div.time").css("background-color", "rgba(" + toRGB(bg_colour) + ", " + bg_opacity + ")");
 	}
+	if (iPhone_6){
+		$("body").css("width", "375px");
+	}
+	if (iPhone_6_Plus){
+		$("body").css("width", "414px");
+	}
 	run();
 });
 

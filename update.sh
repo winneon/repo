@@ -1,7 +1,6 @@
 ./remove.sh
 
 dpkg-deb -b -Zgzip "Minimality"
-dpkg-deb -b -Zgzip "CircleLove"
 dpkg-deb -b -Zgzip "Incepted"
 dpkg-deb -b -Zgzip "Clockwork"
 dpkg-deb -b -Zgzip "Slide"
