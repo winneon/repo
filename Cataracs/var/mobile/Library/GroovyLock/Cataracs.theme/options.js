@@ -7,7 +7,7 @@ var spacing = 160;
 // If you are using an iPhone 6, select this setting. Default is false.
 var iPhone_6 = false;
 
-// If you are using an iPhone 6, select this setting. Default is false.
+// If you are using an iPhone 6 Plus, select this setting. Default is false.
 var iPhone_6_Plus = false;
 
 // Allow the widget to move up when notifications are present on the lockscreen.
