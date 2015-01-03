@@ -1,25 +1,70 @@
+$.ajaxSetup({
+	cache: false,
+	headers: {
+		"Cache-Control": "no-cache"
+	}
+});
 $(document).ready(function(){
-	$("div.content").css("padding-top", spacing + "px");
+	if (xy != "auto, auto"){
+		var x = xy.split(", ")[0];
+		var y = xy.split(", ")[1];
+		
+		vertical_spacing = 0;
+		horizontal_spacing = 0;
+		notification_support = false;
+		
+		$("div.content").css("position", "absolute");
+		$("div.content").css("top", (y - 15) + "px");
+		$("div.content").css("left", x + "px");
+	}
+	if (horizontal){
+		notification_support = false;
+		$("div.content").attr("data-orientation", "horizontal");
+		$("div.content[data-orientation='horizontal'] div.hours").attr("data-separator", horizontal_separator);
+		$("div.content").css("padding-top", horizontal_spacing + "px");
+	} else {
+		$("div.content").css("padding-top", vertical_spacing + "px");
+	}
 	if (date){
 		$("div.date").show();
 	}
 	if (shadow){
 		$("div.time").addClass("shadow");
 	}
+	if (bg_colour != "transparent"){
+		$("div.time").css("background-color", "rgba(" + toRGB(bg_colour) + ", " + bg_opacity + ")");
+	}
+	if (iPhone_6_blur){
+		$("div.bg").css("background-size", "375px auto");
+	}
+	if (iPhone_6_Plus_blur){
+		$("div.bg").css("background-size", "420px auto");
+	}
+	if (border_width != 2){
+		$("div.time").css("border-width", border_width);
+	}
+	if (font_family != "Gotham"){
+		$("body").css("font-family", "'" + font_family + "', -apple-system-font, sans-serif");
+	}
+	if (scale != 1){
+		$("div.time").css("-webkit-transform", "scale(" + scale + ", " + scale + ")");
+	}
+	if (temp){
+		$.simpleWeather({
+			woeid: woeid,
+			unit: unit,
+			success: function(data){
+				console.log(data);
+				$("div.temp").html(data.temp + "&deg; " + data.units.temp);
+			}
+		});
+		$("div.temp").css("visibility", "visible");
+	}
 	if (blur){
 		$("div.blur").blurjs({
 			source: "div.bg",
 			radius: radius
 		});
-	}
-	if (bg_colour != "transparent"){
-		$("div.time").css("background-color", "rgba(" + toRGB(bg_colour) + ", " + bg_opacity + ")");
-	}
-	if (iPhone_6){
-		$("body").css("width", "375px");
-	}
-	if (iPhone_6_Plus){
-		$("body").css("width", "414px");
 	}
 	run();
 });
@@ -45,11 +90,28 @@ function run(){
 			$("div.content").animate({
 				"padding-top": notification_spacing + "px"
 			}, 1000);
-		} else if ($("div.content").css("padding-top") != spacing + "px"){
+		} else if ($("div.content").css("padding-top") != vertical_spacing + "px"){
 			$("div.content").animate({
-				"padding-top": spacing + "px"
+				"padding-top": vertical_spacing + "px"
 			}, 1000);
 		}
+	}
+	if (battery){
+		$.get("file:///var/mobile/Library/Stats/BatteryStats.txt", function(data){
+			var split = data.split("\n");
+			var level = split[0].split(": ")[1];
+			var state = split[1].split(": ")[1];
+			
+			if (state != "Unplugged"){
+				$("div.time").css("background-image", "-webkit-linear-gradient(bottom, #27AE60, #27AE60 " + level + "%, transparent " + level + "%, transparent 100%)");
+				$("div.time").css("border-width", "5px");
+				$("div.cap").show();
+			} else {
+				$("div.time").css("border-width", border_width);
+				$("div.time").css("background-image", "none");
+				$("div.cap").hide();
+			}
+		});
 	}
 	
 	setTimeout(run, 1000);

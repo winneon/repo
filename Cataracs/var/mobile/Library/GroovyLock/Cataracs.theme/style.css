@@ -3,11 +3,21 @@
 	padding: 0;
 }
 
+html,
 body {
-	width: 320px;
+	width: 100%;
+}
+
+body {
 	text-align: center;
 	color: white;
 	font-family: "Gotham", -apple-system-font, sans-serif;
+}
+
+img {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 div.bg {
@@ -21,29 +31,33 @@ div.bg {
 	z-index: -1;
 }
 
-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
 div.content {
 	display: inline-block;
 }
 
 div.blur {
 	position: absolute;
-	width: 124px;
-	height: 164px;
 	z-index: -1;
 }
 
 div.time {
+	position: relative;
 	font-size: 56px;
 	line-height: 60px;
 	border: 2px solid white;
 	width: 120px;
 	padding: 20px 0px 20px 0px;
+}
+
+div.cap {
+	display: none;
+	position: absolute;
+	background-color: white;
+	width: 40px;
+	height: 10px;
+	top: -15px;
+	margin-left: -20px;
+	left: 50%;
 }
 
 div.shadow {
@@ -52,16 +66,46 @@ div.shadow {
 
 div.hours {
 	font-weight: 700;
+	z-index: 1;
+}
+
+div.temp,
+div.date {
+	position: relative;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+div.temp {
+	visibility: hidden;
+	top: 25px;
 }
 
 div.date {
 	display: none;
-	position: relative;
-	left: 2px;
-	bottom: 23px;
-	width: 120px;
-	font-size: 12px;
-	font-weight: 700;
+	bottom: 25px;
+}
+
+div.content[data-orientation="vertical"] div.blur {
+	width: 124px;
+	height: 164px;
+}
+
+div.content[data-orientation="horizontal"] div.blur {
+	width: 204px;
+	height: 104px;
+}
+
+div.content[data-orientation="horizontal"] div.time {
+	width: 200px;
+}
+
+div.content[data-orientation="horizontal"] div.time > div {
+	display: inline-block;
+}
+
+div.content[data-orientation="horizontal"] div.hours:after {
+	content: attr(data-separator);
 }
 
 @font-face {

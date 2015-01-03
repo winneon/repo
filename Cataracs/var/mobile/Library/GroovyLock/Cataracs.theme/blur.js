@@ -1,3 +1,11 @@
+/* 
+ * Blur.js
+ * Copyright Jacob Kelley
+ * MIT License
+ * 
+ * There are a few modifications in this file by Jesse Bryan, the creator of Cataracs.
+ * All original code is credited to Jacob Kelly, the creator of blur.js.
+ */
 (function ($) {
 	$.fn.blurjs = function (options) {
 		var canvas = document.createElement('canvas');
