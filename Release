@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-Origin: Winneon's Magical Wonderland
-Label: Winneon's Magical Wonderland
+Origin: winneon's repository
+Label: winneon's repo
 Suite: stable
-Version: 1.0
-Codename: ios
+Version: 1.0.1
+Codename: tohsaka
 Architectures: iphoneos-arm
 Components: main
-Description: Winneon's Magical Wonderland is a magical wonderland of ponies and rainbows. (okay no) Actually, it is a repository holding all of Winneon's creations involving theming, tweaking, you name it! uwu
-=======
-Origin: Winneon's Magical Wonderland
-Label: Winneon's Magical Wonderland
-Suite: stable
-Version: 1.0
-Codename: ios
-Architectures: iphoneos-arm
-Components: main
-Description: Winneon's Magical Wonderland is a magical wonderland of ponies and rainbows. (okay no) Actually, it is a repository holding all of Winneon's creations involving theming, tweaking, you name it! uwu
->>>>>>> FETCH_HEAD
+Description: This repository contains many themes designed by the reddit user /u/WinneonSword.
