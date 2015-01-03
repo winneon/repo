@@ -102,7 +102,7 @@ function run(){
 			var level = split[0].split(": ")[1];
 			var state = split[1].split(": ")[1];
 			
-			if (state != "Unplugged"){
+			if (state != "Unplugged" || state != "nil"){
 				$("div.time").css("background-image", "-webkit-linear-gradient(bottom, #27AE60, #27AE60 " + level + "%, transparent " + level + "%, transparent 100%)");
 				$("div.time").css("border-width", "5px");
 				$("div.cap").show();
