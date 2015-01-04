@@ -79,6 +79,7 @@ div.date {
 div.temp {
 	visibility: hidden;
 	top: 25px;
+	z-index: 1;
 }
 
 div.date {
@@ -100,7 +101,7 @@ div.content[data-orientation="horizontal"] div.time {
 	width: 200px;
 }
 
-div.content[data-orientation="horizontal"] div.time > div {
+div.content[data-orientation="horizontal"] div.time > div:not(.cap) {
 	display: inline-block;
 }
 

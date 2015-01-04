@@ -18,7 +18,6 @@ $(document).ready(function(){
 		$("div.content").css("left", x + "px");
 	}
 	if (horizontal){
-		notification_support = false;
 		$("div.content").attr("data-orientation", "horizontal");
 		$("div.content[data-orientation='horizontal'] div.hours").attr("data-separator", horizontal_separator);
 		$("div.content").css("padding-top", horizontal_spacing + "px");
@@ -49,23 +48,16 @@ $(document).ready(function(){
 	if (scale != 1){
 		$("div.time").css("-webkit-transform", "scale(" + scale + ", " + scale + ")");
 	}
-	if (temp){
-		$.simpleWeather({
-			woeid: woeid,
-			unit: unit,
-			success: function(data){
-				console.log(data);
-				$("div.temp").html(data.temp + "&deg; " + data.units.temp);
-			}
-		});
-		$("div.temp").css("visibility", "visible");
-	}
 	if (blur){
 		$("div.blur").blurjs({
 			source: "div.bg",
 			radius: radius
 		});
 	}
+	if (temp){
+		temperature();
+	}
+	
 	run();
 });
 
@@ -90,9 +82,9 @@ function run(){
 			$("div.content").animate({
 				"padding-top": notification_spacing + "px"
 			}, 1000);
-		} else if ($("div.content").css("padding-top") != vertical_spacing + "px"){
+		} else if ($("div.content").css("padding-top") != (horizontal ? horizontal_spacing : vertical_spacing) + "px"){
 			$("div.content").animate({
-				"padding-top": vertical_spacing + "px"
+				"padding-top": (horizontal ? horizontal_spacing : vertical_spacing) + "px"
 			}, 1000);
 		}
 	}
@@ -115,6 +107,20 @@ function run(){
 	}
 	
 	setTimeout(run, 1000);
+}
+
+function temperature(){
+	$.simpleWeather({
+		woeid: woeid,
+		unit: unit,
+		success: function(data){
+			console.log(data);
+			$("div.temp").html(data.temp + "&deg; " + data.units.temp);
+		}
+	});
+	$("div.temp").css("visibility", "visible");
+	
+	setTimeout(temp, 10000);
 }
 
 function toRGB(hex){
