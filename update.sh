@@ -9,4 +9,3 @@ dpkg-deb -b -Zgzip "Cataracs"
 dpkg-deb -b -Zgzip "CataracsforiPad"
 
 dpkg-scanpackages -m . /dev/null > Packages
-bzip2 Packages
