@@ -3,8 +3,8 @@ Name: Cataracs
 Version: 1.3.2
 Architecture: iphoneos-arm
 Description: Cataracs is a realtively simple lockscreen clock / widget that features a minimal clock centered on the lockscreen.
-Depiction: http://repo.winneonsword.net/d/net.winneonsword.cataracs.html
-Homepage: http://repo.winneonsword.net
+Depiction: http://repo.winneon.moe/d/net.winneonsword.cataracs.html
+Homepage: http://repo.winneon.moe/
 Depends: com.groovycarrot.groovyapi, com.matchstic.infostats
 Maintainer: Jesse Bryan <winneonsword@gmail.com>
 Author: Jesse Bryan <winneonsword@gmail.com>
