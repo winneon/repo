@@ -8,9 +8,9 @@
 		<script type="text/javascript" src="options.js"></script>
 		<script type="text/javascript">
 			function init(){
-				var verb = new VerbalDate(hours12format);
+				var verb = new VerbalDate(hours12format, militaryTime);
 				var date = new Date();
-				
+
 				document.getElementById("dayofweek").innerHTML = verb.getDayOfWeek();
 				document.getElementById("day").innerHTML = date.getDate();
 				document.getElementById("month").innerHTML = verb.getMonth();
