@@ -1,7 +1,8 @@
-function VerbalDate(hours12){
+function VerbalDate(hours12, militaryTime){
 	var hours = hours12;
 	var date = new Date();
-	
+	var military = militaryTime;
+
 	var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
 		"Thursday", "Friday", "Saturday"];
 	var months = ["January", "February", "March", "April",
@@ -13,17 +14,28 @@ function VerbalDate(hours12){
 		"Sixteen", "Seventeen", "Eighteen", "Nineteen"];
 	var tens = ["Twenty", "Thirty", "Forty", "Fifty",
 		"Sixty", "Seventy", "Eighty", "Ninety"];
-		
+
 	var convert = function(num, minute){
 		var result = "";
 		if (num < ones.length){
-			if (num < 10 && minute){
-				result += "o'";
-			}
-			if (num === 0 && minute){
-				result += "clock";
+			if (military) {
+				if (num === 0 && minute){
+					result += "hundred";
+				} else {
+					if (num < 10 && minute){
+						result += "oh ";
+					}
+					result += ones[num];
+				}
 			} else {
-				result += ones[num];
+				if (num < 10 && minute){
+					result += "o'";
+				}
+				if (num === 0 && minute){
+					result += "clock";
+				} else {
+					result += ones[num];
+				}
 			}
 		} else {
 			var ten = Math.floor(num / 10);
@@ -39,28 +51,36 @@ function VerbalDate(hours12){
 		}
 		return result;
 	};
-	
+
 	return {
 		getDay:function(){
 			return convert(date.getDate(), false);
 		},
-		
+
 		getDayOfWeek:function(){
 			return days[date.getDay()];
 		},
-		
+
 		getMonth:function(){
 			return months[date.getMonth()];
 		},
-		
+
 		getYear:function(){
 			return date.getYear();
 		},
-		
+
 		getHour:function(){
-			return convert(date.getHours() > 12 && hours ? date.getHours() - 12 : date.getHours(), false);
+			var hour = date.getHours();
+			var hourStr = "";
+			if (hour == 0) {
+				hourStr += "Zero dark";
+			} else {
+				hourStr += hour < 12 && military ? 'oh ' : '';
+				hourStr += convert(hour > 12 && hours ? hour - 12 : hour, false);
+			}
+			return hourStr;
 		},
-		
+
 		getMinute:function(){
 			return convert(date.getMinutes(), true);
 		}
